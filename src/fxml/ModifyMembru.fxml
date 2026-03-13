@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.ModifyMembruController"
+      stylesheets="@style.css">
+
+    <Label text="Modificare Membru"
+           styleClass="section-title"/>
+
+    <TableView fx:id="tableMembri" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNume" text="Nume"/>
+            <TableColumn fx:id="colPrenume" text="Prenume"/>
+            <TableColumn fx:id="colVarsta" text="Vârstă"/>
+            <TableColumn fx:id="colInstrument" text="Instrument"/>
+            <TableColumn fx:id="colNationalitate" text="Naționalitate"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="tfNume" promptText="Nume"/>
+    <TextField fx:id="tfPrenume" promptText="Prenume"/>
+    <TextField fx:id="tfVarsta" promptText="Vârstă"/>
+    <TextField fx:id="tfInstrument" promptText="Instrument"/>
+    <TextField fx:id="tfNationalitate" promptText="Naționalitate"/>
+
+    <Button text="Actualizează"
+            onAction="#updateMembru"/>
+
+</VBox>

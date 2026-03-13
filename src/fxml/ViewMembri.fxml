@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.ViewMembriController"
+      stylesheets="@style.css">
+
+    <Label text="Lista Membri"
+           styleClass="section-title"/>
+
+    <TableView fx:id="tableMembri" prefHeight="500">
+
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNume" text="Nume"/>
+            <TableColumn fx:id="colPrenume" text="Prenume"/>
+            <TableColumn fx:id="colVarsta" text="Vârstă"/>
+            <TableColumn fx:id="colInstrument" text="Instrument"/>
+            <TableColumn fx:id="colNationalitate" text="Naționalitate"/>
+        </columns>
+
+    </TableView>
+
+</VBox>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.ModifyFormatieController"
+      stylesheets="@style.css">
+
+    <Label text="Modificare Formație"
+           styleClass="section-title"/>
+
+    <TableView fx:id="tableFormatii" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNume" text="Nume"/>
+            <TableColumn fx:id="colGen" text="Gen"/>
+            <TableColumn fx:id="colAn" text="An"/>
+            <TableColumn fx:id="colTara" text="Țară"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="tfNume" promptText="Nume"/>
+    <TextField fx:id="tfGen" promptText="Gen muzical"/>
+    <TextField fx:id="tfAn" promptText="An înființare"/>
+    <TextField fx:id="tfTara" promptText="Țara origine"/>
+
+    <Button text="Actualizează"
+            onAction="#updateFormatie"/>
+
+</VBox>

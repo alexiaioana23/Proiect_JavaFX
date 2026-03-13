@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.AddMembruController">
+
+    <Label text="Adaugă Membru"/>
+
+    <TextField fx:id="tfNume" promptText="Nume"/>
+    <TextField fx:id="tfPrenume" promptText="Prenume"/>
+    <TextField fx:id="tfVarsta" promptText="Vârstă"/>
+    <TextField fx:id="tfInstrument" promptText="Instrument"/>
+    <TextField fx:id="tfNationalitate" promptText="Naționalitate"/>
+
+    <Button text="Salvează" onAction="#save"/>
+    <Button text="Anulează" onAction="#cancel"/>
+
+</VBox>

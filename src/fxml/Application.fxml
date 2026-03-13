@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controller.ApplicationController"
+            stylesheets="@style.css">
+
+    <!-- TITLU SUS -->
+    <top>
+        <VBox alignment="CENTER" styleClass="header">
+            <Label text="🎵 Dashboard Administrare Formații Muzicale"
+                   styleClass="title-label"/>
+        </VBox>
+    </top>
+
+    <!-- GRID PRINCIPAL -->
+    <center>
+        <GridPane hgap="40" vgap="40" styleClass="main-grid">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+            </rowConstraints>
+
+ <!-- VIZUALIZARE -->
+<VBox spacing="15" styleClass="card"
+      GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <Label text="Vizualizare" styleClass="section-title"/>
+    <Button text="Formații" onAction="#openViewFormatii"/>
+    <Button text="Membri" onAction="#openViewMembri"/>
+    <Button text="Contracte" onAction="#openViewContracte"/>
+</VBox>
+
+<!-- ADĂUGARE -->
+<VBox spacing="15" styleClass="card"
+      GridPane.columnIndex="1" GridPane.rowIndex="0">
+    <Label text="Adăugare" styleClass="section-title"/>
+    <Button text="Adaugă formație" onAction="#openAddFormatie"/>
+    <Button text="Adaugă membru" onAction="#openAddMembru"/>
+    <Button text="Adaugă contract" onAction="#openAddContract"/>
+</VBox>
+
+<!-- MODIFICARE -->
+<VBox spacing="15" styleClass="card"
+      GridPane.columnIndex="0" GridPane.rowIndex="1">
+    <Label text="Modificare" styleClass="section-title"/>
+    <Button text="Modifică formație" onAction="#openModifyFormatie"/>
+    <Button text="Modifică membru" onAction="#openModifyMembru"/>
+    <Button text="Modifică contract" onAction="#openModifyContract"/>
+</VBox>
+
+<!-- ȘTERGERE -->
+<VBox spacing="15" styleClass="card"
+      GridPane.columnIndex="1" GridPane.rowIndex="1">
+    <Label text="Ștergere" styleClass="section-title"/>
+    <Button text="Șterge formație" onAction="#openDeleteFormatie"/>
+    <Button text="Șterge membru" onAction="#openDeleteMembru"/>
+    <Button text="Șterge contract" onAction="#openDeleteContract"/>
+</VBox>
+
+        </GridPane>
+    </center>
+
+</BorderPane>

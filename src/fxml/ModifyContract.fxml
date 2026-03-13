@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.ModifyContractController"
+      stylesheets="@style.css">
+
+    <Label text="Modificare Contract"
+           styleClass="section-title"/>
+
+    <TableView fx:id="tableContracte" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colIdFormatie" text="ID Formație"/>
+            <TableColumn fx:id="colIdMembru" text="ID Membru"/>
+            <TableColumn fx:id="colDataStart" text="Data Start"/>
+            <TableColumn fx:id="colDataEnd" text="Data Sfârșit"/>
+            <TableColumn fx:id="colStatus" text="Status"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="tfIdFormatie" promptText="ID Formație"/>
+    <TextField fx:id="tfIdMembru" promptText="ID Membru"/>
+    <DatePicker fx:id="dpDataStart"/>
+    <DatePicker fx:id="dpDataEnd"/>
+    <TextField fx:id="tfStatus" promptText="Status"/>
+
+    <Button text="Actualizează"
+            onAction="#updateContract"/>
+
+</VBox>

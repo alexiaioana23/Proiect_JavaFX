@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.DeleteContractController"
+      stylesheets="@style.css">
+
+    <Label text="Ștergere Contract"
+           styleClass="section-title"/>
+
+    <TableView fx:id="tableContracte" prefHeight="450">
+
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colIdFormatie" text="ID Formație"/>
+            <TableColumn fx:id="colIdMembru" text="ID Membru"/>
+            <TableColumn fx:id="colDataStart" text="Data Start"/>
+            <TableColumn fx:id="colDataEnd" text="Data Sfârșit"/>
+            <TableColumn fx:id="colStatus" text="Status"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Șterge contractul selectat"
+            onAction="#deleteContract"/>
+
+</VBox>

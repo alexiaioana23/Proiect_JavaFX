@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.AddFormatieController">
+
+    <Label text="Adaugă Formație"/>
+
+    <TextField fx:id="tfNume" promptText="Nume"/>
+    <TextField fx:id="tfGen" promptText="Gen muzical"/>
+    <TextField fx:id="tfAn" promptText="An înființare"/>
+    <TextField fx:id="tfTara" promptText="Țara origine"/>
+
+    <Button text="Salvează" onAction="#save"/>
+    <Button text="Anulează" onAction="#cancel"/>
+
+</VBox>
